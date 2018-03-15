@@ -1,8 +1,6 @@
 # follow-those-who-A-legend
-Here we are, to follow the steps of those who are the legends of the time.
+Here I am, to follow the steps of those who are the legends of the time.
 
-## Index
+## Help-wanted
 
-| No. | Title | Decription |
-| --- | --- | --- |
-| 1 | CF101020 | Easy |
+HYSBZ-2342
