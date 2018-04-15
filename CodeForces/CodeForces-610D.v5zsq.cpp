@@ -4,8 +4,8 @@ using LL = long long;
 #define ls (rt<<1)
 #define rs ((rt<<1)|1)
 
-// http://blog.csdn.net/v5zsq/article/details/70258228 
-// 线段数点 ==> 矩形的并
+// http://blog.csdn.net/v5zsq/article/details/70258228
+// 绾挎鏁扮偣 ==> 鐭╁舰鐨勫苟
 
 const int INF = 0x3F3F3F3F;
 const int maxN = 200002;
@@ -28,7 +28,7 @@ LL len[maxN<<3], cover[maxN<<3];
 void pushup(int rt, int l, int r)
 {
     if (cover[rt]) len[rt] = h[r]-h[l];
-    else 
+    else
     {
         if (l==r) len[rt] = 0;
         else len[rt] = len[ls] + len[rs];
@@ -59,7 +59,7 @@ signed main()
 	{
 		memset(len, 0, sizeof(len));
 		memset(cover, 0, sizeof(cover));
-		
+
 		int res = 0;
 		for (int i=1; i<=n; ++i)
 		{
@@ -71,7 +71,7 @@ signed main()
 		}
 		sort(h, h+res); res = unique(h, h+res)-h;
 		sort(e, e+2*n);
-		
+
 		LL ans = 0;
 		for (int i=0; i<2*n-1; ++i)
 		{

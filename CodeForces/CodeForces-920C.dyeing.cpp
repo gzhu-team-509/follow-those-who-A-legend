@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// 染色法，效率与计数法相当 
+// 鏌撹壊娉曪紝鏁堢巼涓庤鏁版硶鐩稿綋
 
 const int maxN = 200200;
 
@@ -20,7 +20,7 @@ int main()
 	{
 		if (s[i-1] == '1') dye[i+1] = dye[i];
 	}
-	
+
 	bool flag = true;
 	for (int i = 1; i <= n; ++i)
 	{
@@ -28,4 +28,3 @@ int main()
 	}
 	cout << (flag ? "YES" : "NO") << endl;
 }
-

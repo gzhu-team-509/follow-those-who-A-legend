@@ -1,16 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, m, k; 
+int n, m, k;
 long long best;
 long long dish[20];
 long long comb[20][20];
-long long dp[1<<20][20]; // dp[st][i] ±íÊ¾st×´Ì¬ÏÂÒÔj-thµÀ²Ë½áÎ²µÄ×î¼ÑµÃ·Ö 
+long long dp[1<<20][20]; // dp[st][i] è¡¨ç¤ºstçŠ¶æ€ä¸‹ä»¥j-thé“èœç»“å°¾çš„æœ€ä½³å¾—åˆ†
 
 int popcount(long long x)
 {
-	int cnt = 0; 
-	while (x) 
+	int cnt = 0;
+	while (x)
 	{
 		if (x&1) ++cnt;
 		x >>= 1;
@@ -23,8 +23,8 @@ void solve()
 	for (long long st = 1; st < (1<<n); ++st)
 	{
 		int cnt = popcount(st);
-		if (cnt > m) continue; 
-		
+		if (cnt > m) continue;
+
 		bool single = true;
 		for (long long i = 0; (1<<i) <= st; ++i) if ((1<<i)&st)
 		{
@@ -47,7 +47,7 @@ int main()
 	#ifdef LOCAL
 	freopen("in.txt", "r", stdin);
 	#endif
-	
+
 	cin >> n >> m >> k;
 	for (int i = 0; i < n; ++i)
 	{
@@ -59,8 +59,7 @@ int main()
 		int x, y, c; cin >> x >> y >> c;
 		comb[x-1][y-1] = c;
 	}
-	
+
 	solve();
 	cout << best << endl;
 }
-

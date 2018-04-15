@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// ½øÒ»²½ÓÅ»¯ 
-// ConanYu - https://vjudge.net/solution/12230381 
-// ¿ÉÒÔÓÃpairÀ´ÓÅ»¯£¬±ÜÃâ¶¨Òåp 
+// è¿›ä¸€æ­¥ä¼˜åŒ–
+// ConanYu - https://vjudge.net/solution/12230381
+// å¯ä»¥ç”¨pairæ¥ä¼˜åŒ–ï¼Œé¿å…å®šä¹‰p
 
 const long long INF = 0x3F3F3F3F3F3F3F3F;
 
@@ -11,12 +11,12 @@ struct p
 {
 	int x;
 	long long dis;
-	
+
 	bool operator < (const p& oth) const
 	{
 		if (dis != oth.dis)
 			return dis > oth.dis;
-		else 
+		else
 			return x < oth.x;
 	}
 };
@@ -41,10 +41,10 @@ void dijkstra()
 	{
 		p cur = q.top(); q.pop();
 		int src = cur.x;
-		
+
 		if (dis[src] < cur.dis) continue;
 		if (src == n) break;
-		
+
 		for (int i = 0; i < g[src].size(); ++i)
 		{
 			int dst = g[src][i].dst;
@@ -56,18 +56,18 @@ void dijkstra()
 			}
 		}
 	}
-	
+
 	if (dis[n] != INF)
 	{
 		int ans[100100], cur = n, i = 0;
 		while (cur != 0)
 		{
 			ans[i++] = cur;
-			cur = front[cur]; 
+			cur = front[cur];
 		}
 		while (--i >= 0)
 			printf("%d ", ans[i]);
-		printf("\n"); 
+		printf("\n");
 	}
 	else printf("-1\n");
 }
@@ -77,8 +77,8 @@ int main()
 	#ifdef LOCAL
 	freopen("in.txt", "r", stdin);
 	#endif
-	
-	
+
+
 	while (scanf("%d%d", &n, &m) == 2)
 	{
 		memset(dis, 0x3F, sizeof(dis));
@@ -87,7 +87,7 @@ int main()
 			front[i] = 0;
 			g[i].push_back({i, 0});
 		}
-		
+
 		while (m--)
 		{
 			int a, b; scanf("%d%d", &a, &b);
@@ -95,8 +95,7 @@ int main()
 			g[a].push_back({b, w});
 			g[b].push_back({a, w});
 		}
-		
+
 		dijkstra();
 	}
 }
-

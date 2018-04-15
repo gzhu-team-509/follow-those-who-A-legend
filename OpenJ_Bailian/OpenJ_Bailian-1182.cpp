@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// rk[x] = r(x->find(x)): 0-Í¬Àà 1-²¶Ê³Õß 2-±»²¶Ê³Õß
+// rk[x] = r(x->find(x)): 0-åŒç±» 1-æ•é£Ÿè€… 2-è¢«æ•é£Ÿè€…
 
 int n;
 int fa[50500], rk[50500];
@@ -10,7 +10,7 @@ void init()
 {
 	for (int i = 0; i <= n; ++i) fa[i] = i, rk[i] = 0;
 }
- 
+
 int find(int x)
 {
 	if (fa[x] == x) return x;
@@ -39,7 +39,7 @@ int main()
 	#ifdef LOCAL
 	freopen("in.txt", "r", stdin);
 	#endif
-	
+
 	int k; scanf("%d%d", &n, &k);
 	{
 		init(); int ans = 0;
@@ -52,4 +52,3 @@ int main()
 		printf("%d\n", ans);
 	}
 }
-

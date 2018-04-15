@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// 四边形不等式DP优化
-// https://hrbust-acm-team.gitbooks.io/acm-book/content/dynamic_programming/opt.html 
+// 鍥涜竟褰笉绛夊紡DP浼樺寲
+// https://hrbust-acm-team.gitbooks.io/acm-book/content/dynamic_programming/opt.html
 
 int n;
 int d[1010];
@@ -25,11 +25,11 @@ int main()
 	freopen("in.txt", "r", stdin);
 	freopen("out.txt", "w", stdout);
 	#endif
-	
+
 	scanf("%d", &n);
 	for (int i = 1; i <= n; ++i)
 		scanf("%d", &d[i]), d[i] += d[i-1], s[i][i] = i;
-	
+
 	for (int i = 2; i <= n; ++i)
 	{
 		for (int j = 1; j <= n; ++j)
@@ -47,11 +47,10 @@ int main()
 			p[j][k] += get(j, k);
 		}
 	}
-	
+
 	int ans = p[1][n];
 	for (int i = 2; i <= n; ++i)
-		ans = min(ans, p[i][reflect(i+n-1)]); 
-	
+		ans = min(ans, p[i][reflect(i+n-1)]);
+
 	printf("%d\n", ans);
 }
-

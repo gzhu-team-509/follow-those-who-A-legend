@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-// Ó³Éä
+// æ˜ å°„
 // https://vjudge.net/solution/1051124
 
 char str[100][55];
@@ -22,5 +22,4 @@ int main()
 	sort(ref, ref+m);
 	for (int i = 0; i < m; ++i)
 		puts(str[ref[i]%100]);
-} 
-
+}

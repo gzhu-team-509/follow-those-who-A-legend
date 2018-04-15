@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// 结论错误 
-// 前一个质数并不是当前合数的最大质因数 
+// 缁撹閿欒
+// 鍓嶄竴涓川鏁板苟涓嶆槸褰撳墠鍚堟暟鐨勬渶澶ц川鍥犳暟
 
 const int maxN = 1000010;
 bool isprime[maxN];
@@ -28,8 +28,8 @@ void seive()
 int main()
 {
 	seive();
-	
-	int n; 
+
+	int n;
 	while (scanf("%d", &n) == 1){
 		if (n == 1) {
 			printf("0\n"); continue;

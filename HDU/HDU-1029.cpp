@@ -1,18 +1,18 @@
 #include <bits/stdc++.h>
 
-// Ë¼Â·Ğ¡½á£º 
-// 1.Í³¼Æ
-// 2.ÅÅĞò
-// 3.µİÍÆ¹ØÏµ
+// æ€è·¯å°ç»“ï¼š
+// 1.ç»Ÿè®¡
+// 2.æ’åº
+// 3.é€’æ¨å…³ç³»
 
-// ÈıÖÖË¼Â·²Î¿¼£º 
+// ä¸‰ç§æ€è·¯å‚è€ƒï¼š
 // http://blog.csdn.net/to_be_better/article/details/50557796
 
-// Ë¼Â·3
+// æ€è·¯3
 int main()
 {
 	int n;
-	while (scanf("%d", &n) == 1) 
+	while (scanf("%d", &n) == 1)
 	{
 		int cnt = 0, ans; scanf("%d", &ans);
 		while (--n)
