@@ -1,3 +1,7 @@
+现已合并到[algorithm-code](https://github.com/lightyears1998/algorithm-code/tree/master/online)仓库。
+
+---
+
 ## Reason Unknown
 
 帽子学长的字典树和我的字典树，猜测是我的指针没有释放堆叠起来超过内存限制。
